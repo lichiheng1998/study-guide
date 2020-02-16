@@ -1,0 +1,92 @@
+.login_container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./static/login_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.login_container__block {
+    margin: auto;
+    font-size: 1em;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ced4da;
+    min-width: 300px;
+}
+
+.login_container__block__group {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    .login_container__block {
+        width: 80%;
+    }
+}
+
+.login_container__block__group span{
+    font-size: 80%;
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+}
+
+.login_container__block__group label, .login_container__block__group input{
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+}
+
+.login_container__block__group label {
+    font-size: inherit;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.login_container__block__group input {
+    height: 2em;
+    border-radius: .25rem;
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.login_container__block__group input:focus {
+    outline: none;
+    border: 1px solid blue;
+}
+
+.login_container__block button {
+    padding: 10px;
+    transition: all 0.5s;
+    float: left;
+    margin-top: 5px;
+}
+
+.login_container__block button span {
+    margin: 0 5px;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.login_container__block button:hover span {
+    padding-right: 15px;
+}
+
+.login_container__block button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.login_container__block button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
